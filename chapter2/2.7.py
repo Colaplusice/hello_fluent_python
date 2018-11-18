@@ -1,6 +1,5 @@
-fruit=['apple','banana','grape','water','melon']
+fruit = ["apple", "banana", "grape", "water", "melon"]
 
-a=sorted(fruit,key=len)
+a = sorted(fruit, key=len)
 
 print(a)
-

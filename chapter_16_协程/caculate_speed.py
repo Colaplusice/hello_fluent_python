@@ -1,12 +1,14 @@
 from functools import wraps
 import time
 
+
 def coroutine(func):
     @wraps(func)
     def primer(*args, **kwargs):
         gen = func(*args, **kwargs)
         next(gen)
         return gen
+
     return primer
 
 
@@ -19,6 +21,7 @@ def cal_speed():
         now = yield yield_value
         total += now
         count += 1
-        print('now the average is :', float(total/ count))
+        print("now the average is :", float(total / count))
+
 
 cal_speed()
