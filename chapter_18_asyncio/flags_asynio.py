@@ -1,6 +1,6 @@
 import asyncio
 import aiohttp
-from chapter_17_future.flags import BASE_URL, save_flag, show_txt, main
+from chapter_17_future.download_flag import BASE_URL, save_flag, show, main
 
 
 @asyncio.coroutine
@@ -15,7 +15,7 @@ def get_flags(cc):
 @asyncio.coroutine
 def download_one(cc):
     image = yield from get_flags(cc)
-    show_txt(cc)
+    show(cc)
     save_flag(image, cc.lower() + ".gif")
     return cc
 

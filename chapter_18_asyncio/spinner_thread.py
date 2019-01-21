@@ -23,7 +23,6 @@ def spin(msg, signal):
 
 def slow_function():
     time.sleep(3)
-
     return 42
 
 

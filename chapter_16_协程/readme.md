@@ -7,3 +7,4 @@
 
 通过循环来推动协程时间的发展。
 预激使用next函数来完成。
+每个 yield function as function() must have be activated.
